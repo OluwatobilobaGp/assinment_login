@@ -1,45 +1,55 @@
-#bg{
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.bg{
     background-color: rgb(210, 200, 233);
-    height: 130vh;
+    height: 100%;
     display: flex;
     text-align: center;
     font-size: 16px;
     justify-content: center;
     padding-top: 50px;
+    padding-bottom: 50px;
  
    
 }
-#fg{
+.fg{
     background-color: white;
     width: 600px;
     height: 900px;
     font-family: sans-serif;
     font-weight: 200;
     padding-top: 50px;
-    
-
+    border-radius: 10px;
 }
-#T1{
+
+form{
+    border-radius: 10px;
+}
+.T1{
     display: flex;
     margin-left: 60px;
     padding-top: 5opx;
     
 }
-#F1{
+.F1{
     display: grid;
     margin-left: 60px;
     width: 450px;
     height: 30px;
     border-radius: 7.5px;
 }
-#n_a{
+.n_a{
     border-radius: 34px;
     border-radius: 25px;
     height: 50px;
     width: 50px;
 
 }
-#B1{
+.B1{
     display: grid;
     margin-left: 105px;
     width: 30px;
@@ -48,29 +58,112 @@
     
     
 }
-#F2{
+
+.checkers{
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.toggle-container{
+    display: flex;
+    gap: 8px;
+    margin-left: 60px;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #06f76a;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #06f76a;
+    transition: .3s;
+}
+
+.text{
+    margin-top: 4px;
+}
+
+.active {
+    border-color: rgb(235, 6, 63);
+}
+
+.active + .text {
+    font-weight: 400;
+    color: rgb(235, 6, 63);
+}
+
+.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: .3s;
+    background-color: rgb(235, 6, 63);
+}
+
+
+.F2{
     margin-left: 60px;
     width: 30px;
     height: 45px;
     border-radius: 15px;
+}
+.checkers span{
+    margin-top:18px;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown .dropdown-item{
+    display: flex;
+    margin-left: 60px;
+    padding-left: 5px;
+    width: 380px;
+    height: 40px;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.dropdown-item:focus{
+    border-color: blueviolet;
+}
+
+.sub-button{
+    display: flex;
+    gap:70px;
+    padding: 30px 60px;
+    justify-content: space-between;
 
 }
-#D{
-    display: grid;
-    margin-left: 60px;
-    width: 450px;
-    height: 50px;
-    border-color: blueviolet;
+
+.sub-button button{
+    padding: 10px 40px;
+    background-color: white;
+    border: 1px solid violet;
+    font-weight: 600;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
-#BUT{
-    border-color: blueviolet;
-    margin-left: 50PX;
-   
-}
-#BUT2{
-    border-color: blueviolet;
-    color: blueviolet;
-    
+
+button:hover{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    text-shadow: 2px 2px #000;
 }
