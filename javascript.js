@@ -1,5 +1,6 @@
 let active = false;
 
+
 function toggle() {
     let toggle = document.querySelector('.toggle')
     let text = document.querySelector('.text')

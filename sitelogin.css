@@ -1,11 +1,23 @@
+:root{
+    --Primary-color: #f80808;
+    --container-color: 
+   }
+
+   a:hover{
+    text-decoration: ;
+   }
+
 body{
     padding: 0;
     margin: 0;
 }
 
+label{
+    font-family:;
+}
 
 .bg{
-    background-color: rgb(210, 200, 233);
+    background-color: var(--Primary-color);
     height: 100%;
     display: flex;
     text-align: center;
@@ -18,8 +30,8 @@ body{
 }
 .fg{
     background-color: white;
-    width: 600px;
-    height: 900px;
+    width: 100%;
+    height: auto;
     font-family: sans-serif;
     font-weight: 200;
     padding-top: 50px;
@@ -29,18 +41,23 @@ body{
 form{
     border-radius: 10px;
 }
+
+form label:nth-child(5){
+    text-align: left;
+}
 .T1{
     display: flex;
     margin-left: 60px;
-    padding-top: 5opx;
+    padding-top: 5px;
     
 }
 .F1{
     display: grid;
     margin-left: 60px;
-    width: 450px;
+    width: 80%;
     height: 30px;
     border-radius: 7.5px;
+    border: var(--Primary-color) 1px solid;
 }
 .n_a{
     border-radius: 34px;
@@ -67,9 +84,23 @@ form{
 
 .toggle-container{
     display: flex;
+    color: blue;
     gap: 8px;
     margin-left: 60px;
 }
+
+.toggle-container .text span{
+    color: bisque;
+}
+.toggle-container .text span:nth-child(1){
+    color:red;
+}
+.toggle-container .text span:nth-child(3):hover{
+    color:rgb(141, 224, 7);
+}
+
+
+
 
 .toggle {
     position: relative;
@@ -134,7 +165,7 @@ form{
     display: flex;
     margin-left: 60px;
     padding-left: 5px;
-    width: 380px;
+    width: auto;
     height: 40px;
     border-width: 2px;
     border-radius: 5px;
@@ -146,24 +177,33 @@ form{
 
 .sub-button{
     display: flex;
-    gap:70px;
-    padding: 30px 60px;
+    /* gap:50px; */
+    width: auto;
+    padding: 30px 30px;
     justify-content: space-between;
-
 }
 
 .sub-button button{
-    padding: 10px 40px;
+    padding: 10px 10px;
     background-color: white;
-    border: 1px solid violet;
+    border: 1px solid var(--Primary-color);
     font-weight: 600;
     border-radius: 5px;
+    margin-left: 10px;
     text-transform: uppercase;
 }
 
 button:hover{
-    background-color: blueviolet;
+    background-color: var(--Primary-color);
     color: white;
     border: none;
     text-shadow: 2px 2px #000;
+}
+
+/* @media screen and (max-width:520px) {
+    .sub-button button{
+        padding: 10px 600px;
+    } */
+      
+    
 }
